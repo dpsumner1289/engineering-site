@@ -1,0 +1,99 @@
+section.deans_letter {
+    .block {
+        background:$white;
+        &:first-child {
+            margin-top: -40vh;
+            padding-bottom: 0;
+            @include breakpoint(tablet) {
+                margin-top: -15vh;
+            }
+        }
+        &:last-child {
+            padding-top: 0;
+        }
+    }
+    .empty_hero {
+        min-height:80vh;
+        background-position: 50%;
+        background-size:cover;
+        @include breakpoint(tablet) {
+            min-height: 30vh;
+        }
+    }
+    .item_2_7 {
+        img {
+            align-self: center;
+        }
+        .open_quote {
+            color:$green;
+            height: auto;
+            font-size: 7rem;
+            margin-top: -1rem;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 2rem;
+            width: 85%;
+            flex-basis: 85%;
+            padding-top: 1rem;
+        }
+    }
+    .item_5_7 {
+        .identity {
+            h4 {
+                margin-top:0;
+                margin-bottom:$half-gr;
+                padding-bottom: $half-gr;
+                font-size: $golden_ratio;
+                color:$blue;
+                position: relative;
+                &:after {
+                    content:'';
+                    width:100px;
+                    left: 0;
+                    bottom: 0;
+                    height: 4px;
+                    background-color: $green;
+                    position: absolute;
+                }
+            }
+        }
+        &.bullets-standard {
+            ul {
+                list-style: disc;
+                li {
+                    i.fas {
+                        display:none;
+                    }
+                }
+            }
+        }
+        &.bullets-arrows {
+            
+        }
+    }
+    .mobile {
+        display:none;
+    }
+    @include breakpoint(tablet) {
+        .mobile {
+            display:flex;
+        }
+        .letter_desktop {
+            display:none;
+        }
+        .item_2_7 {
+            padding-top: 0;
+            padding-left: 0;
+        }
+    }
+    @include breakpoint(phablet) {
+        .item_2_7, .item_5_7 {
+            width:100%;
+            flex-basis:100%;
+        }
+        .item_2_7 {
+            padding: 0;
+        }
+    }
+}

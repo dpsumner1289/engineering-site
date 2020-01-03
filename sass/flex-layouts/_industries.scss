@@ -1,0 +1,82 @@
+section.industries {
+    background-color: #253545;
+    .intro {
+        margin-right:auto;
+        max-width:1024px;
+        color:$white;
+        .heading {
+            color:$white;
+            font-size: 16px;
+            font-weight: 400;
+            position: relative;
+            padding-bottom:.89rem;
+            &:after {
+                content:"";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width:125px;
+                border-top: 1px solid $blue;
+            }
+        }
+        .intro_content_heading {
+            color:$white;
+            font-size: 28px;
+            p {
+                line-height: 35px;
+            }
+        }
+    }
+    .industry_grid {
+        .industry {
+            .image_wrap {
+                overflow: hidden;
+                position: relative;
+                background-size: cover;
+                background-position: 50%;
+                .meta {
+                    @include ease();
+                    width:100%;
+                    position: absolute;
+                    background-color:rgba($gunmetal, .8);
+                    padding: .89rem;
+                    color:$white;
+                    min-height: 100%;
+                    top: calc(100% - 55px);
+                    h4 {
+                        color:$white;
+                        margin: 0 0 .89rem;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .description {
+                        font-size: 14px;
+                        p {
+                            line-height: 20px;
+                        }
+                    }
+                    .seemore {
+                        width: 100%;
+                        text-align: center;
+                        @include breakpoint(mobile) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &:hover {
+                    overflow: visible;
+                    transition: .4s overflow ease;
+                    .meta {
+                        top: 0 !important;
+                    }
+                }
+                &.no_js {
+                    .meta {
+                        top: 0 !important;
+                        justify-content: center !important;
+                    }
+                }
+            }
+        }
+    }
+}

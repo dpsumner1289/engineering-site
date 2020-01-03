@@ -1,0 +1,51 @@
+ul, ol {
+	margin: 0 0 1.5em 1em;
+}
+
+ul {
+	list-style: none;
+	li {
+		i.fas {
+			margin-right: 10px;
+			color:$blue;
+		}
+	}
+}
+ul.nocaret {
+	i.fas {
+		display:none;
+	}
+}
+.sharethis {
+	border-top: 1px solid #e9e9e9;
+	font-size:1.5rem;
+	padding-top: .89rem;
+	justify-content: flex-start;
+	.heateor_sss_sharing_container {
+		margin-left:$golden_ratio;
+		ul.heateor_sss_follow_ul li, ul.heateor_sss_sharing_ul li {
+			margin-right:.25rem !important;
+			i.fas {
+				display:none !important;
+			}
+		}
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}

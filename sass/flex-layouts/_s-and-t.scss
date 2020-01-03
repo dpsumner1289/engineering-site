@@ -1,0 +1,46 @@
+.s_and_t {
+    background-color: white;
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .st_content {
+        padding:3.236rem 0;
+    }
+    .intro {
+        margin:0 auto;
+        max-width:1024px;
+        .heading {
+            color:$blue;
+            font-size: 16px;
+            font-weight: 400;
+            position: relative;
+            padding-bottom:.89rem;
+            &:after {
+                content:"";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width:125px;
+                border-top: 1px solid $blue;
+            }
+        }
+        .intro_content {
+            font-size: 28px;
+            p {
+                line-height: 35px;
+            }
+        }
+    }
+    .features {
+        .feature {
+            padding:1.618rem .89rem 1.618rem 0;
+            .heading {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .description {
+                font-size: 16px;
+            }
+        }
+    }
+}

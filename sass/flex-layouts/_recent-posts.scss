@@ -1,0 +1,87 @@
+section.recent_posts {
+    .posts_heading {
+        margin-top: 0;
+    }
+    .flex:not(.col) {
+        .post {
+            &:not(:last-child) {
+                padding-right:1.618rem;
+            }
+            &:not(:first-child) {
+                padding-left:1.618rem;
+            }
+        }
+    }
+    .col {
+        .post {
+            margin-bottom: 1.618rem;
+        }
+    }
+    .post {
+        .background {
+            border-radius: 6px;
+            box-shadow: 0px 0px 7px #eee;
+            background-size:cover;
+            background-position: center center;
+            overflow: hidden;
+            .cats {
+                text-transform: uppercase;
+                background-color:#fff;
+                text-align: left;
+                padding:.89rem 1.618rem;
+                width:100%;
+                z-index: 1;
+            }
+            .excerpt {
+                padding:4.405rem 1.618rem;
+                color:#fff;
+                font-weight: 500;
+                @include ease();
+                @include breakpoint(laptop) {
+                    padding:.89rem 1.618rem;
+                }
+            }
+            &:hover {
+                .excerpt {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &:nth-child(3n+1) {
+            .background{
+                .excerpt{
+                    background-color:rgba($green, .5);
+                }
+                .cats {
+                    color:$green;
+                }
+            }
+        }
+        &:nth-child(3n+2) {
+            .background{
+                .excerpt{
+                    background-color:rgba($blue, .5);
+                }
+                .cats {
+                    color:$blue;
+                }
+            }
+        }
+        &:nth-child(3n+3) {
+            .background{
+                .excerpt{
+                    background-color:rgba($gunmetal, .5);
+                }
+                .cats {
+                    color:$gunmetal;
+                }
+            }
+        }
+        @include breakpoint(tablet) {
+            padding:0 !important;
+            width:100% !important;
+            flex-basis: 100% !important;
+            margin-bottom: .89rem;
+        }
+    }
+}

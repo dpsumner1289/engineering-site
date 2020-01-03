@@ -1,0 +1,104 @@
+.post-type-archive-client, .page-template-case-studies {
+    h2.client-type {
+        font-size: 3.326rem;
+        text-transform: uppercase;
+        font-weight: lighter;
+    }
+    .case_studies {
+        .client {
+            padding: 1.618rem 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid $lightestgray;
+            }
+            .client_info {
+                h4 {
+                    margin: 0 0 .89rem;
+                    font-size: 30px;
+                    color: $blue;
+                    position: relative;
+                    padding-bottom: .445rem;
+                    &:after {
+                        content:'';
+                        width:75px;
+                        height:2px;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background: $blue;
+                    }
+                }
+                .meta-group {
+                    font-size:85%;
+                    margin-bottom: .89rem;
+                    flex-flow: nowrap;
+                    -webkit-flex-flow:nowrap;
+                    span {
+                        color:$lightgray;
+                    }
+                    .item_3_4 {
+                        padding-left: 12px;
+                    }
+                }
+                .focus_heading {
+                    margin-bottom: .89rem;
+                    font-weight: 400;
+                }
+            }
+            .image {
+                padding: 1.618rem;
+                img {
+                    align-self: flex-end;
+                    @include breakpoint(tablet) {
+                        max-width: 400px;
+                    }
+                    @include breakpoint(mobile) {
+                        max-width: 100%;
+                    }
+                }
+            }
+            &:nth-of-type(even) {
+                .client_info {
+                    order:1;
+                }
+                .image {
+                    order:2;
+                }
+                @include breakpoint(tablet) {
+                    .client_info {
+                        order:2;
+                    }
+                    .image {
+                        order:1;
+                    }
+                }
+            }
+        }
+    }
+    .trusted_by {
+        h4 {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid $lightestgray;
+            margin-bottom: 1.618rem;
+            padding-bottom: .89rem;
+        }
+        .leaders {
+            .item_1_6 {
+                padding:.89rem;
+                img {
+                    @include ease();
+                    &:hover {
+                        transform:scale(1.1);
+                    }
+                }
+                @include breakpoint(tablet) {
+                    width:calc(100%/3) !important;
+                    flex-basis:calc(100%/3) !important;
+                }
+            }
+        }
+    }
+    section.simple_cta .container h2 {
+        font-size: 3rem;
+    }
+}

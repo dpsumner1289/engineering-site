@@ -1,0 +1,12 @@
+.page_nav {
+    padding-bottom:1.618rem;
+    border-bottom:1px solid $lightestgray;
+    a {
+        margin-left:1.618rem;
+        @include breakpoint(phablet) {
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

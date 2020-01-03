@@ -1,0 +1,12 @@
+section.page {
+    .content {
+        padding:0 $golden_ratio;
+
+        h1:first-child {
+            margin-top: 0;
+        }
+    }
+    .sidebar {
+        padding:0 $golden_ratio;
+    }
+}

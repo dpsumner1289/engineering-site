@@ -1,0 +1,222 @@
+aside.filtering {
+	width: 300px;
+	position: absolute;
+	background-color: #fafafa;
+	padding: 1.618rem 1.618rem 1.618rem 0;
+    z-index: 9;
+    top: 170px;
+    left:-100%;
+    
+    a.cat_filter {
+        @include hide-link();
+        color:$blue;
+        margin:3px .89rem;
+        text-transform: uppercase;
+        cursor:pointer;
+        &:hover {
+            &:after {
+                height:3px !important;
+            }
+        }
+    }
+    .filter_options {
+        max-width: 300px;
+        .cat_heading {
+            border-bottom:1px solid #e5e5e5;
+            padding-bottom:$half-gr;
+            margin-bottom:$half-gr;
+            margin-left:.89rem;
+        }
+        .search-form {
+            padding: 0 5%;
+            .month_select {
+                width: calc(65% - 20px);
+                margin: 0 10px;
+            }
+            .year_select {
+                width: 35%;
+            }
+            input {
+                border-radius:0;
+                border-color:$blue;
+                background-color: transparent;
+            }
+            div {
+                input.post-type {
+                    margin-bottom:$half-gr;
+                    margin-right: 5px;
+                }
+            }
+            .date, #city {
+                display: block;
+                width: 100%;
+                margin: 15px auto;
+            }
+            #city {
+                padding:3px;
+                border-color:$blue;
+                background-color: transparent;
+            }
+            .keywords {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                margin: $golden_ratio 0 0;
+                padding: 8px;
+                font-size: 1rem;
+                text-transform: uppercase;
+            }
+        }
+        .col {
+            -webkit-flex-flow: column nowrap;
+        }
+    }
+    .filter_heading {
+        border-bottom:1px solid #e5e5e5;
+        padding: 0 .89rem .89rem;
+        margin-bottom:$half-gr;
+        h4 {
+            margin: 0;
+        }
+        a {
+            cursor: pointer;
+            &.reset {
+                color:$blue !important;
+            }
+            &.hide {
+                color:$blue !important;
+            }
+        }
+    }
+    @include breakpoint(laptop) {
+        position: relative;
+        left: auto;
+        top:auto;
+        width:100%;
+        .filter_options {
+            max-width:100%;
+        }
+    }
+}
+div.category_heading {
+    .item_1_5, .item_4_5 {
+        padding:.89rem;
+    }
+}
+
+@include breakpoint(laptop) {
+    .filter_show {
+        width:100%;
+    }
+}
+
+// datepicker
+
+.ui-datepicker {
+    width: 300px;
+    height: 300px;
+    margin: 5px auto 0;
+    background:#f2f2f2;
+    display:none;
+}
+
+    .ui-datepicker table {
+        width: 100%;
+    }
+
+.ui-datepicker-header {
+    background: #f2f2f2;
+    color: $blue;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #111;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.ui-datepicker-prev {
+    float: left;
+    cursor: pointer;
+    background-position: center -30px;
+}
+
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+    background-position: center 0px;
+}
+
+.ui-datepicker thead {
+    background-color: #f7f7f7;
+
+    /*border-bottom: 1px solid #bbb;*/
+}
+
+.ui-datepicker th {
+    text-transform: uppercase;
+    font-size: 8pt;
+    color: #666666;
+}
+
+.ui-datepicker tbody td {
+    padding: 0;
+    /*border-right: 1px solid #808080;*/
+}
+
+    .ui-datepicker tbody td:last-child {
+        border-right: 0px;
+    }
+
+.ui-datepicker tbody tr {
+    border-bottom: 1px solid #bbb;
+}
+
+    .ui-datepicker tbody tr:last-child {
+        border-bottom: 0px;
+    }
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    /*font-weight: bold;*/
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+      background: #f2f2f2;
+      color:$blue;
+      height:40px;
+      width:40px;
+
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    background: $blue;
+    color: #FFFFFF;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: $blue;
+    color: $green;
+    border: 1px solid $green;
+    position: relative;
+    margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    background: #D6E4BE;
+    color: #000;
+}
+

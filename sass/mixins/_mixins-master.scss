@@ -1,0 +1,194 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// remove link underline
+@mixin no-link() {
+	&:after {
+		display:none;
+	}
+}
+@mixin hide-link() {
+	&:after {
+		height:0 !important;
+	}
+	&:hover {
+		&:after {
+			height:100% !important;
+		}
+	}
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+// Section Headings
+@mixin section-heading($color, $alignment) {
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: $golden_ratio;
+	width: 100%;
+	text-align: $alignment;
+	color:$color;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 200px;
+		@if $alignment == left {
+			left:0;
+			margin-left:0;
+		}
+		@else if $alignment == center {
+			left: 50%;
+			margin-left: -100px;
+		}
+		border-bottom: 4px solid $color;
+		bottom: 0;
+	}
+}
+
+@mixin heading-underline($color, $alignment) {
+	position: relative;
+	padding-bottom:$half-gr;
+	width:100%;
+	text-align: $alignment;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		left:0;
+		border-top: 1px solid $color;
+		border-bottom: 3px solid $color;
+		height:6px;
+		bottom: 0;
+	}
+}
+
+// Inline Styling
+
+@mixin inline($alignment) {
+	display: inline-block;
+    vertical-align: $alignment;
+}
+
+// Easing
+
+@mixin ease() {
+	transition:.3s all ease;
+
+	&:hover{
+		transition: .3s all ease;
+	}
+}
+
+// Sideways date
+
+@mixin side-date() {
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	height: 45px;
+	font-size: 40px;
+	text-align: left;
+	text-transform: uppercase;
+	align-self: center;
+	color: $gunmetal;
+	font-weight: 200;
+	margin-left: -59px;
+}
+
+// Arrow animation
+
+@mixin arrow() {
+	i.fa , i.fas {
+		margin-left:8px;
+		@include ease();
+	}
+	&:hover {
+		i.fa, i.fas {
+			margin-left:20px;
+		}
+	}
+}
+
+// Caption animation
+
+@mixin hover-caption($parentClass, $appear, $grow, $grow-size, $duration) {
+	#{$parentClass} {
+		position: relative;
+		overflow: hidden;
+
+		#{$appear}{
+			position: absolute;
+			bottom: -100%;
+			transition: $duration all ease;
+		}
+
+		#{$grow} {
+			transition: $duration all ease;
+		}
+
+		&:hover {
+			> #{$appear}{
+				transition: $duration all ease;
+				bottom:0;
+			}
+			> #{$grow}{
+				transition: $duration all ease;
+				transform: scale($grow-size);
+			}
+		}
+	}
+}
+
+// Responsive breakpoints 
+
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (max-width: 70em) { @content ; }
+		// 1120px
+	}
+	@else if $point == laptop {
+		@media (max-width: 64em) { @content ; }
+		// 1024px
+	}
+	@else if $point == tablet {
+		@media (max-width: 50em) { @content ; }
+		// 800px
+	}
+	@else if $point == phablet {
+		@media (max-width: 37.5em)  { @content ; }
+		// 600px
+	}
+	@else if $point == mobileonly {
+		@media (max-width: 37.5em)  { @content ; }
+		// 600px
+	}
+	@else if $point == mobile {
+		@media (max-width: 31.25em)  { @content ; }
+		// 600px
+	}
+}

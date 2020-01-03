@@ -1,0 +1,21 @@
+section.regular_page {
+    h2, h3, h4, h5 {
+        clear:none;
+    }
+    .opening_copy {
+        text-align: left;
+    }
+    .block:first-child {
+        background-color:#fafafa;
+    }
+    .dropcap {
+        p:first-of-type:first-letter {
+            font-size: 3.326rem;
+            // line-height: 1.7rem;
+            float: left;
+            padding-top: 16px;
+            padding-right: 8px;
+            padding-left: 3px;
+        }
+    }
+}

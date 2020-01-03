@@ -1,0 +1,103 @@
+section.accordion {
+    .container.container-md {
+        padding-top:0;
+        >h2 {
+          border-bottom:2px solid $blue;
+          margin-bottom: .89rem;
+          padding-bottom: .89rem;
+        }
+    }
+    .tab {
+        position: relative;
+        margin-bottom: 1.618rem;
+        box-shadow: 0px 1px 5px #ccc;
+        width: 100%;
+        color: $gunmetal;
+        overflow: hidden;
+      }
+      input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+      label {
+        position: relative;
+        display: block;
+        padding: 1em 45px 1em 1em;
+        background: $white;
+        font-weight: lighter;
+        line-height: 1.7em;
+        transition: .3s all ease;
+        cursor: pointer;
+
+        @include breakpoint(phablet) {
+          padding-right:3em;
+          line-height:2;
+          padding: .89rem 3em .89rem .89rem;
+        }
+      }
+      .blue label {
+        background: $white;
+      }
+      .tab-content {
+        max-height: 0;
+        overflow: hidden;
+        background: white;
+        color:$gunmetal;
+        -webkit-transition: max-height .35s;
+        -o-transition: max-height .35s;
+        transition: max-height .35s;
+        .related {
+          background:#FAFAFA;
+          padding:.89rem;
+          .links {
+            padding:0 0 0 .89rem;
+            margin:0;
+          }
+          h4 {
+            margin: .89rem 0;
+          }
+          a {
+            color:$blue;
+          }
+        }
+      }
+      .blue .tab-content {
+        background: white;
+
+      }
+      .tab-content p {
+        margin: 1em;
+      }
+      /* :checked */
+      input:checked ~ .tab-content {
+        max-height: 45em;
+      }
+      input[type=radio]:checked + label {
+        font-weight:bold;
+      }
+      /* Icon */
+      label::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+        width: 3em;
+        height: 3em;
+        color:$blue;
+        line-height: 3;
+        text-align: center;
+        -webkit-transition: all .35s;
+        -o-transition: all .35s;
+        transition: all .35s;
+      }
+      input[type=radio] + label::after {
+        content: "\f078";
+        font-family: 'Font Awesome 5 Pro';
+      }
+      input[type=radio]:checked + label::after {
+        transform: rotateX(180deg);
+        font-weight: lighter;
+      }
+      
+}

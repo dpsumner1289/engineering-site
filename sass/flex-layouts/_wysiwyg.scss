@@ -1,0 +1,103 @@
+section.wysiwyg {
+    .container {
+        h2 {
+            font-size: 35px;
+            font-weight: lighter;
+            @include breakpoint(phablet) {
+                font-size: 25px;
+            }
+            &.smallheading {
+                font-size:16px;
+                position: relative;
+                color:$blue;
+                padding-bottom:8px;
+                margin-bottom:1.618rem;
+                &:after {
+                    content:"";
+                    position: absolute;
+                    width:100px;
+                    left:0;
+                    bottom:0;
+                    height:1px;
+                    background-color:$blue;
+                }
+            }
+        }
+        ul {
+            margin-left: 0;
+            padding-left: 1.618rem;
+            display: flex;
+            flex-direction: column;
+            li {
+                margin-bottom: .89rem;
+            }
+        }
+        > *:first-child {
+            margin-top: 0;
+        }
+        >*:last-child {
+            margin-bottom: 0;
+        }
+        .button_row {
+            padding:1.618rem 0 3.326rem;
+            border-bottom: 1px solid $lightestgray;
+        }
+    }
+    form {
+        li.gfield {
+            margin:0;
+            .gfield_label {
+                color:#000;
+                font-weight: 400;
+            }
+            div.ginput_container_name span.name_first {
+                padding-right: 11px !important;
+                margin-bottom: 1.3rem;
+            }
+            div.ginput_container_name span.name_last {
+                padding-right: 0 !important;
+                padding-left: 7px;
+                margin-bottom: 1.3rem;
+            }
+        }
+        input, .gform_footer, .gform_button, {
+            border-radius: 25px;
+        }
+        select.gfield_select, textarea.textarea {
+            border-radius:5px;
+        }
+        select.gfield_select, .ginput_container_email {
+            margin-bottom: 20px;
+        }
+        .ginput_container_textarea {
+            margin-top: 40px;
+        }
+        .gform_footer {
+            width:50%;
+            .gform_button {
+                width:100% !important;
+            }
+        }
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    section.wysiwyg {
+        ul {
+            display: block !important;
+        }
+    }
+}
+@-moz-document url-prefix() {
+    section.wysiwyg {
+        ul {
+            display: flex !important;
+        }
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    section.wysiwyg {
+        ul {
+            display: flex !important;
+        }
+    }
+}

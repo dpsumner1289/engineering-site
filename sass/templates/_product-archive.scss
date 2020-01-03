@@ -1,0 +1,45 @@
+.page-template-product-archive {
+    .flex-hero {
+        .opening_content {
+            h1 {
+                max-width: 500px;
+                font-weight: 700 !important;
+            }
+        }
+    }
+    .page_nav {
+        overflow: hidden;
+        .link-wrap {
+            position: relative;
+            z-index: 1;
+            justify-content: flex-start;
+            span {
+                position: relative;
+                z-index: 1;
+                color: $white !important;
+            }
+            a {
+                margin-left: 3.326rem;
+                @include breakpoint(mobile) {
+                    margin-left: 0;
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: -2em;
+                width: 104vw;
+                height: 107%;
+                top: 0;
+                background: #253545;
+            }
+        }
+    }
+    .mixed_content {
+        .wizzy {
+            li {
+                margin-bottom: .445rem;
+            }
+        }
+    }
+}

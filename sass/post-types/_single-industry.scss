@@ -1,0 +1,36 @@
+body.single-industry {
+    .flex-hero {
+        background-position: top center;
+        .outer-wrapper {
+            padding-bottom: 0;
+            .container {
+                padding-bottom: 0;
+                h1.underline-1::after {
+                    width: 150px;
+                    margin-left: -75px;
+                }
+            }
+        }
+    }
+    .featured_client {
+        >.container {
+            padding-top: 0;
+        }
+        .wizzy {
+            font-size: 22px;
+        }
+    }
+    .author-meta {
+        border-top: 1px solid $blue;
+        padding-top: 1.618rem;
+        margin-top:1.618rem;
+        .line-1 {
+            b {
+                font-weight: 700;
+            }
+        }
+        .line-2 {
+            font-weight: light;
+        }
+    }
+}

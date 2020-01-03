@@ -1,0 +1,126 @@
+body.single-event {
+    .overlap-top {
+        padding-bottom: 1.618rem;
+        .column-2 {
+            > *:not(.embed-container) {
+                display: inline;
+                vertical-align: top;
+            }
+        }
+        .sharethis {
+            border-top: 1px solid #e9e9e9;
+            font-size:1.5rem;
+            padding-top: .89rem;
+            .heateor_sss_sharing_container {
+                margin-left:$golden_ratio;
+                ul.heateor_sss_follow_ul li, ul.heateor_sss_sharing_ul li {
+                    margin-right:.25rem !important;
+                    i.fas {
+                        display:none !important;
+                    }
+                }
+                @include breakpoint(phablet) {
+                    margin-left:0;
+                }
+            }
+        }
+    }
+    div.shareit {
+        margin-top: 1.618rem;
+        padding-top: .89rem;
+        border-top: 5px solid #000;
+        span {
+            color:$lightestgray;
+        }
+        a {
+            color:#000;
+            margin-left:.89rem;
+        }
+    }
+    .flex.row {
+        p:nth-child(-n + 2) {
+            flex-basis:50%;
+        }
+        p:first-child {
+            padding-right:15px;
+        }
+    }
+    section.gallery {
+        img {
+            align-self: center;
+        }
+        .single-image {
+            margin-top: .89rem;
+            padding:.89rem;
+            img {
+                margin-bottom: -8.25px;
+            }
+        }
+        .item_1_3 {
+            padding:$half-gr;
+            text-align: center;
+            img {
+                margin-bottom: -16.5px;
+            }
+        }
+    }
+    .story-grid {
+        background-color:#fafafa;
+        > .container {
+            padding-top: 3.326rem;
+        }
+    }
+    section.recent_posts .post .background .excerpt {
+        padding:3rem 1.618rem;
+    }
+}
+body.page-template-events {
+    .search_hero {
+        >.container {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            .filter_fill {
+                width:100%;
+                text-align: center;
+                h2 {
+                    margin-bottom:-4rem;
+                    @include breakpoint(tablet) {
+                        margin-bottom:0;
+                    }
+                }
+            }
+        }
+    }
+    .story-grid {
+        .container-lg {
+            padding-bottom: 0;
+        }
+    }
+    .clickmore {
+        margin:$golden_ratio;
+        width:100%;
+    }
+}
+body.archive.post-type-archive-event {
+    a > h4 {
+        @include ease();
+        &:hover {
+            color:$blue;
+        }
+    }
+    .meta {
+        a {
+            i {
+                @include ease();
+                margin-right: 5px;
+            }
+            &:hover {
+                i {
+                    transform: rotate(360deg);
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+}

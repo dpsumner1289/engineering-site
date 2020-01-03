@@ -1,0 +1,7 @@
+.acf-field-accordion.-open > .acf-label.acf-accordion-title {
+    background-color:#52BA56;
+    color:#fff;
+}
+.acf-field-accordion.-open > .acf-label.acf-accordion-title i {
+    color:#fff;
+}

@@ -1,0 +1,105 @@
+body.single-service {
+    .flex-hero {
+        .outer-wrapper {
+            flex-grow: 1 !important;
+            flex-shrink: 1 !important;
+            padding-bottom: 0;
+            img {
+                max-width:75px;
+            }
+            h1 {
+                letter-spacing: 1px;
+                font-weight:600;
+            }
+        }
+        &.service_nav {
+            .outer-wrapper {
+                >.container:not(.more_services) {
+                    margin-bottom: 1.618rem;
+                }
+                .more_services {
+                    margin-top: auto;
+                    @include breakpoint(tablet) {
+                        margin: 1.618rem 0;
+                        padding-top: .89rem;
+                    }
+                }
+            }
+        }
+    }
+    .more_services {
+        border-top: 3px solid #fff;
+        color:#fff;
+        margin-top: 1.618rem;
+        a {
+            color:$blue;
+            &:after, &:before {
+                display: none;
+            }
+            &:hover{
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .featured_client {
+        .wizzy {
+            font-size: 22px;
+        }
+    }
+    .author-meta {
+        border-top: 1px solid $blue;
+        padding-top: 1.618rem;
+        margin-top:1.618rem;
+        .line-1 {
+            font-weight: bold;
+        }
+        .line-2 {
+            font-weight: light;
+        }
+    }
+}
+.secondary_content {
+    >.container {
+        border-top: 1px solid $green;
+    }
+    .content, .related_articles {
+        padding:1.618rem;
+    }
+    .content {
+        >*:first-child {
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 45px;
+            line-height: 1.3em;
+        }
+    }
+    .related_articles {
+        h3 {
+            margin-top: 0;
+        }
+        ul {
+            margin:0;
+            padding:0;
+            li {
+                @include ease();
+                a {
+                    color:$blue;
+                }
+                i {
+                    @include ease();
+                }
+                &:not(:last-child) {
+                    margin-bottom:.89rem;
+                }
+                &:hover {
+                    i {
+                        transform: rotate(-180deg);
+                        margin-right:.89rem;
+                        margin-left:-.89rem;
+                    }
+                }
+            }
+        }
+    }
+}

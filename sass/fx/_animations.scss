@@ -1,0 +1,69 @@
+/*-----------------------------------------
+## Keyframes
+-----------------------------------------*/
+
+// Spin
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+// Bounce
+@-moz-keyframes bounce {
+    0% { right: 0; }
+    50% { right: -0.2em; }
+    70% { right: -0.3em; }
+    100% { right: 0; }
+}
+@-webkit-keyframes bounce {
+    0% { right: 0; }
+    50% { right: -0.2em; }
+    70% { right: -0.3em; }
+    100% { right: 0; }
+}
+@keyframes bounce {
+    0% { right: 0; }
+    50% { right: -0.2em; }
+    70% { right: -0.3em; }
+    100% { right: 0; }
+}
+
+/*-----------------------------------------
+## Classes
+-----------------------------------------*/
+
+// Bounce
+.bounce {
+    i {
+        display: inline-block;
+        position: relative;
+    }
+    &:hover {
+        i {
+            -moz-animation: bounce .7s infinite  linear;
+            -o-animation: bounce .7s infinite linear;
+            -webkit-animation: bounce .7s infinite linear;
+            animation: bounce .7s infinite linear;
+        }
+    }
+  }
+
+// Spin
+.spin {
+    &:hover {
+        i {
+            animation: spin 0.02s 15 linear;
+            -moz-animation: spin 0.02s 15 linear;
+            -o-animation: spin 0.02s 15 linear;
+            -webkit-animation: spin 0.02s 15 linear;
+        }
+    }
+}

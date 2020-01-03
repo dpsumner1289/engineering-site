@@ -1,0 +1,97 @@
+section.presidents_letter {
+    .block {
+        background:$white;
+        &:first-child {
+            margin-top: -40vh;
+            padding-bottom: 0;
+            text-align: center;
+        }
+        &:last-child {
+            padding-top: 0;
+        }
+    }
+    .empty_hero {
+        min-height:80vh;
+        background-position: 50%;
+        background-size:cover;
+    }
+    .item_3_7 {
+        img {
+            align-self: center;
+        }
+        .open_quote {
+            color:$green;
+            height: auto;
+            font-size: 7rem;
+            font-family: "BentonSansCond";
+            margin-top: -1rem;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 2rem;
+            width: 85%;
+            flex-basis: 85%;
+            padding-top: 1rem;
+        }
+        .identity {
+            width: 85%;
+            justify-self: flex-end;
+            align-self: flex-end;
+            border-top: 1px solid #c3c3c3;
+            h3 {
+                font-size:17px;
+                margin-bottom:0;
+                padding-bottom: 0;
+            }
+        }
+        @include breakpoint(tablet) {
+            flex-basis:80%;
+            width:80%;
+            .identity {
+                max-width: 300px;
+                justify-self: flex-start;
+                align-self: center;
+            }
+        }
+        @include breakpoint(phablet) {
+            flex-basis:100%;
+            width:100%;
+            padding:0;
+            .open_quote {
+                flex-basis: 15%;
+                width: 15%;
+                margin-bottom: -1.5rem;
+            }
+            .quote {
+                flex-basis:82%;
+                width:82%;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .item_4_7 {
+        h2 {
+            font-family: 'MinionPro', serif;
+            font-size: 2.427rem;
+        }
+        @include breakpoint(tablet) {
+            flex-basis:100%;
+            width:100%;
+        }
+    }
+    @include breakpoint(tablet) {
+        .block {
+            &:first-child {
+                margin-top: -15vh;
+            }
+        }
+        .empty_hero {
+            min-height:30vh;
+        }
+    }
+    @include breakpoint(phablet) {
+        .item_4_7 {
+            padding:0;
+        }
+    }
+}

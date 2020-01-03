@@ -1,0 +1,52 @@
+/* BentonSans */
+
+@font-face {
+    font-family:'BentonSans';
+    src: url('BentonSans-Bold.otf') format('opentype');
+    font-weight:600;
+    font-style:normal;
+}
+@font-face {
+    font-family:'BentonSans';
+    src: url('BentonSans-Regular.otf') format('opentype');
+    font-weight:400;
+    font-style:normal;
+}
+@font-face {
+    font-family:'BentonSans';
+    src: url('BentonSans-Light.otf') format('opentype');
+    font-weight:300;
+    font-style:normal;
+}
+@font-face {
+    font-family:'BentonSansCond';
+    src: url('BentonSansCond-Bold.otf') format('opentype');
+    font-weight:bold;
+    font-style:normal;
+}
+@font-face {
+    font-family:'BentonSansCond';
+    src: url('BentonSansCond-Regular.otf') format('opentype');
+    font-weight:400;
+    font-style:normal;
+}
+@font-face {
+    font-family:'BentonSansCond';
+    src: url('BentonSansCond-Light.otf') format('opentype');
+    font-weight:300;
+    font-style:normal;
+}
+/* MinionPro */
+
+@font-face {
+    font-family:'MinionPro';
+    src: url('MinionPro-Bold.otf') format('opentype');
+    font-weight:bold;
+    font-style:normal;
+}
+@font-face {
+    font-family:'MinionPro';
+    src: url('MinionPro-Medium.otf') format('opentype');
+    font-weight:400;
+    font-style:normal;
+}

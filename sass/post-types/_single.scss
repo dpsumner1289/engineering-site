@@ -1,0 +1,25 @@
+body.single {
+    .blog-header {
+        min-height:50vh;
+    }
+    .overlap-top {
+        margin-top: -25vh;
+        background:#fafafa;
+        >h3 {
+            text-align:center;
+            text-transform: uppercase;
+        }
+        h1 {
+            text-align: center;
+            width:100%;
+            text-transform: uppercase;
+            font-size:3rem;
+            @include breakpoint(tablet) {
+                font-size:2rem;
+            }
+        }
+    }
+}
+.lower_padding-bottom {
+    background-color:#fff;
+}

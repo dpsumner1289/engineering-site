@@ -1,0 +1,15 @@
+.page-template-support {
+    .secondary_content, .tertiary_content {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 1.618rem;
+            width: calc(100% - 3.236rem);
+            height: 1px;
+            background-color: #ccc;
+            max-width: 1440px;
+        }
+    }
+}

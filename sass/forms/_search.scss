@@ -1,0 +1,33 @@
+div.search {
+    width: 270px;
+    .search-form {
+        button {
+            -webkit-appearance: none;
+            border: none;
+            color: $green;
+            background: transparent;
+            font-style: italic;
+            margin-right: 5px;
+            font-size: 1rem;
+            i {
+                margin-right:5px;
+            }
+        }
+        .search-field {
+            background: rgba(255,255,255,.2);
+            color: $green;
+            border-radius: 0;
+            border: none;
+            width:0;
+            padding:0;
+            font-style: italic;
+            margin-left:57%;
+            &:focus {
+                color:$green;
+            }
+        }
+    }
+    @include breakpoint(tablet) {
+        display: none;
+    }
+}

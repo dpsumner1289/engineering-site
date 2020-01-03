@@ -1,0 +1,68 @@
+.gallery {
+	margin-bottom: 4.05rem;
+	figure.wp-caption {
+		margin-bottom:-100px;
+		padding:0 !important;
+		figcaption {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+	img {
+		align-self: center;
+	}
+	.single-image {
+		margin-top: .89rem;
+		padding:.89rem;
+		img {
+			margin-bottom: -8.25px;
+		}
+	}
+	.item_1_3 {
+		padding:$half-gr;
+		text-align: center;
+		img {
+			margin-bottom: -16.5px;
+		}
+	}
+	div.loadmore {
+		width: 100%;
+		text-align: right;
+		a {
+			cursor: pointer;
+			border:2px solid;
+		}
+		@include breakpoint(laptop) {
+			margin-top: $golden_ratio;
+		}
+		@include breakpoint(tablet) {
+			text-align: center;
+		}
+	}
+	@include breakpoint(tablet) {
+		.natural {
+			padding-top: 0;
+			.item_1_6 {
+				padding: 0.89rem;
+				// margin-bottom: -16.5px;
+			}
+		}
+		figure.wp-caption {
+			margin-bottom:$golden_ratio;
+		}
+	}
+	.container {
+		div.loaded {
+			padding: 0 14.5px;
+		}
+	}
+}
+.fancybox-caption__body {
+	a {
+		font-size: 16px;
+		color: $green !important;
+	}
+}
+.gallery-caption {
+	display: block;
+}

@@ -1,0 +1,34 @@
+.pad {
+    padding:$golden_ratio;
+}
+.padright {
+    padding-right:$golden_ratio;
+}
+.padleft {
+    padding-left:$golden_ratio;
+}
+.pad-above {
+    margin-top: 4.205rem;
+}
+.martop {
+    margin-top: $golden_ratio;
+}
+.marbottom {
+    margin-bottom: $golden_ratio;
+}
+.marbottom-half {
+    margin-bottom: $half-gr;
+}
+.nopad {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.nopad-top {
+    padding-top: 0;
+}
+.nopad-bottom {
+    padding-bottom: 0;
+}
+.nopad-all {
+    padding:0;
+}

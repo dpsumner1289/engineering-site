@@ -1,0 +1,190 @@
+.gform_wrapper {
+    ul.gform_fields {
+        li.gfield {
+            margin-top: 10px;
+            i.fas {
+                display:none !important;
+            }
+            input, select {
+                border:1px solid #ccc;
+                background: #fbfbfb;
+                margin-top: 0;
+            }
+            select {
+                padding: 5px 4px;
+            }
+
+            .gfield_label {
+                color:$blue;
+                margin: .89rem 0 0;
+            }
+            &.gf_right_half {
+                padding-right: 0;
+                padding-left: 7px;
+                @include breakpoint(phablet) {
+                    padding-left:0;
+                }
+            }
+            &.gf_left_half {
+                padding-right: 9px;
+                @include breakpoint(phablet) {
+                    padding-right:0;
+                }
+            }
+            &#field_1_1 {
+                padding-right:0;
+            }
+            &#field_1_4 {
+                .ginput_container_select {
+                    display: inline-block;
+                    min-width: 50%;
+                    position: relative;
+
+                    select {
+                        width:100%;
+                    }
+                }
+            }
+        }
+        li.centerfield {
+            text-align: center;
+        }
+        span.name_first, span.name_last {
+            label {
+                display:none !important;
+            }
+        }
+    }
+    .gform_footer {
+        text-align: left;
+        position: relative;
+        padding:0 !important;
+        float:left;
+        background: $blue;
+        z-index: 1;
+
+        input {
+            
+            border-radius: 0;
+            padding: .6rem $golden_ratio;
+            color: $white;
+            background-color:transparent;
+            margin:0 !important;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-color: $blue;
+            @include ease();
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            border-color:transparent;
+            transition:.3s all ease;
+            input {
+                border-color:transparent;
+            }
+            &:after {
+                width:100%;
+            }
+        }
+        @include breakpoint(tablet) {
+            float: none;
+            text-align: center;
+            input {
+                width:100% !important;
+            }
+        }
+    }
+}
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+    padding: 5px 10px !important;
+}
+
+.blog-header {
+    .item_1_3 {
+        .gform_wrapper {
+            margin-bottom: 0;
+
+            #gform_2 {
+                @extend .flex;
+                @extend .afc;
+                .gform_body {
+                    width:60%;
+                    li.gfield {
+                        margin: 0;
+                        padding: 0;
+
+                        .gfield_label {
+                            display:none;
+                        }
+                        .ginput_container_email {
+                            margin:0;
+
+                            input {
+                                width:100%;
+                                border: 1px solid $blue;
+                            }
+                        }
+                    }
+                }
+                .gform_footer {
+                    width: 40%;
+                    clear: none;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    text-align: right;
+
+                    input {
+                        margin:0;
+                        background-color: $blue;
+                        border: 1px solid $blue;
+                        @include ease();
+                        font-weight: lighter;
+                        padding-left: 35px;
+                        padding-right: $half-gr;
+
+                        &:hover {
+                            color:$white;
+                            background-color:$blue;
+                            border-color:$blue;
+                        }
+                        @include breakpoint(tablet) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    &:before {
+                        content: "\f0e0";
+                        font-family: 'Font Awesome 5 Free';
+                        position: absolute;
+                        color: white;
+                        top: 12px;
+                        left: 24px;
+                        @include breakpoint(tablet) {
+                            top: 18px;
+                            left: 11px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#content {
+    .wysiwyg {
+        .gform_wrapper {
+            ul {
+                display: block !important;
+
+                .gfield {
+                   &.gf_right_half,
+                   &.gf_left_half {
+                        margin-bottom: 1em !important;
+                    }
+                }
+            }
+        }
+    }
+}

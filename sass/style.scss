@@ -1,0 +1,101 @@
+/*!
+Theme Name: caelynx
+Author: build/create
+Author URI: http://buildcreate.com
+Description: a highly customized wordpress theme by build/create studios
+Version: 1.0.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: build-create
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# structure
+--------------------------------------------------------------*/
+@import "structure/flexbox";
+@import "structure/containers";
+@import "structure/aesthetics";
+@import "structure/columns";
+
+/*--------------------------------------------------------------
+# base styling
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+@import "modules/alignments";
+@import "modules/clearings";
+@import "modules/infinite-scroll";
+@import "typography/typography";
+@import "structure/base";
+@import "navigation/navigation";
+@import "media/media";
+ // animations
+ @import "fx/animations";
+
+/*--------------------------------------------------------------
+# templates
+--------------------------------------------------------------*/
+@import "templates/contact";
+@import "templates/blog";
+@import "templates/product-archive";
+@import "templates/support";
+
+/*--------------------------------------------------------------
+# sections
+--------------------------------------------------------------*/
+@import "sections/header";
+@import "sections/page";
+@import "sections/sidebar";
+@import "sections/footer";
+ // forms
+ @import "forms/forms";
+
+/*--------------------------------------------------------------
+# flex sections
+--------------------------------------------------------------*/
+@import "flex-layouts/accordion";
+@import "flex-layouts/image-hero";
+@import "flex-layouts/grid";
+@import "flex-layouts/contact-section";
+@import "flex-layouts/mixed-content";
+@import "flex-layouts/counter-row";
+@import "flex-layouts/simple-cta";
+@import "flex-layouts/recent-posts";
+@import "flex-layouts/wysiwyg";
+@import "flex-layouts/variable-width-content";
+@import "flex-layouts/dlc";
+@import "flex-layouts/our_process";
+@import "flex-layouts/s-and-t";
+@import "flex-layouts/industries";
+
+/*--------------------------------------------------------------
+# post types
+--------------------------------------------------------------*/
+@import "post-types/single";
+@import "post-types/events";
+@import "post-types/team_members";
+@import "post-types/single-client";
+@import "post-types/single-service";
+@import "post-types/single-industry";
+@import "post-types/single-product";
+@import "post-types/resources";
+@import "post-types/clients";
+
+/*--------------------------------------------------------------
+# taxonomies
+--------------------------------------------------------------*/
+@import "post-types/taxonomies/capabilities";
+
+
+//////////////// other ////////////
+
+.wp-embedded-content {
+	width:100%;
+}

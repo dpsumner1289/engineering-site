@@ -1,0 +1,43 @@
+.variable_width_content {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-color: white;
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .heading {
+        color:$blue;
+        position: relative;
+        padding-bottom:.89rem;
+        font-weight: 400;
+        &:after {
+            content:"";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width:130px;
+            border-top: 1px solid $blue;
+        }
+    }
+    ul {
+        li {
+            margin-bottom:.89rem;
+        }
+        @include breakpoint(tablet) {
+            columns:1 !important;
+            padding:0;
+        }
+    }
+    @include breakpoint(mobile) {
+        background-image: none !important;
+        .variable_row {
+            flex-basis: 100% !important;
+            width:100% !important;
+            ul {
+                columns: 1 !important;
+            }
+        }
+    }
+}

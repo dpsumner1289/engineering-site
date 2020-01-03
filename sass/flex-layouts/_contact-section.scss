@@ -1,0 +1,80 @@
+section.contact_section {
+    .block {
+        background:$white;
+        &:first-child {
+            margin-top: -40vh;
+            padding-bottom: 0;
+            text-align: center;
+        }
+        &:last-child {
+            padding-top: 0;
+            @include breakpoint(phablet) {
+                padding:0;
+            }
+        }
+    }
+    .empty_hero {
+        min-height:80vh;
+        background-position: 50%;
+        background-size:cover;
+    }
+    .heading-block {
+        >div {
+            font-size:18px;
+        }
+    }
+    .item_3_5 {
+        padding-top: .89rem;
+        .gform_wrapper {
+            margin-top: 0;
+            #field_1_1 {
+                margin-top: 0;
+                label.gfield_label {
+                    margin-top: 0;
+                }
+            }
+        }
+        .gform_wrapper ul.gform_fields li.gfield {
+            padding-right: 0;
+            #input_1_1_3 {
+                
+            }
+            &::after {
+                content:'';
+                display:table;
+                clear: both;
+            }
+        }
+    }
+    .item_2_5 {
+        .pad {
+            background: #fafafa;
+            h3:first-child {
+                margin-top: 0;
+            }
+            a {
+                border-bottom: 4px solid $green;
+                color: $blue;
+                &:after {
+                    display:none;
+                }
+            }
+        }
+    }
+    @include breakpoint(tablet) {
+        .block {
+            &:first-child {
+                margin-top: -15vh;
+            }
+        }
+        .empty_hero {
+            min-height:30vh;
+        }
+        .item_2_5 {
+            order:1;
+        }
+        .item_3_5 {
+            order:2;
+        }
+    }
+}

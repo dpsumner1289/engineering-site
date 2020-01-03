@@ -1,0 +1,89 @@
+body.single-team_members {
+    .flex-page {
+        margin-top: -215px;
+        .member_image {
+            .back {
+                align-self: flex-start;
+                color:$blue;
+                margin-bottom: .89rem;
+                i {
+                    transition: .3s all ease;
+                }
+                &:after {
+                    display:none;
+                }
+                &:hover {
+                    i {
+                        transition: .3s all ease;
+                        margin-left:-1rem;
+                        margin-right:1rem;
+                    }
+                }
+            }
+        }
+        .flex-posts {
+            padding:0 1.618rem;
+            .entry-header {
+                margin-bottom: 1.618rem;
+                .entry-title {
+                    padding:0 0 .89rem;
+                    margin: 1.618rem 0 .89rem;
+                    font-size: 2.427rem;
+                    color: $white;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 100px;
+                        left: 0;
+                        bottom: 0;
+                        border-top: 3px solid #00C2FF;
+                    }
+                }
+                .member_meta {
+                    a {
+                        color:$blue;
+                        margin-left: .89rem;
+                        @include ease();
+                        &:after {
+                            display:none;
+                        }
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .sub_title {
+                        color: $white;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 1rem;
+                        font-weight: lighter;
+                    }
+                }
+            }
+            .entry-content {
+                margin-top: 1.618rem;
+            }
+        }
+        @include breakpoint(tablet) {
+            .member_image {
+                align-items: center;
+            }
+            .entry-header {
+                .entry-title {
+                    color:$gunmetal !important;
+                }
+                .member_meta {
+                    .sub_title {
+                        color:$gunmetal !important;
+                    }
+                }
+            }
+        }
+        @include breakpoint(tablet) {
+            margin-top: -95px;
+        }
+        @include breakpoint(mobile) {
+            margin-top: -215px;
+        }
+    }
+}

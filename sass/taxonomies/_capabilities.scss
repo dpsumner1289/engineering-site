@@ -1,0 +1,99 @@
+.capabilities_headline {
+    border-bottom:2px solid $blue;
+    padding:.89rem 0;
+    h3 {
+        padding:0;
+        margin:0;
+    }
+}
+section.case_studies {
+    aside.case_study {
+        padding:1.618rem 2.405rem;
+        h4 {
+            margin-bottom: .89rem;
+            padding-bottom: .89rem;
+            border-bottom: 2px solid $blue;
+            width: 100%;
+            font-size: 22px;
+            font-weight: lighter;
+        }
+        img {
+            transition: .3s all ease;
+        }
+        &:hover {
+            img {
+                transition: .3s all ease;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+section.articles {
+    .article {
+        .item_1_5 {
+            padding: .89rem .89rem .89rem 0;
+            img {
+                align-self: center;
+                border-radius: 10px;
+                transition: .3s all ease;
+            }
+        }
+        .item_4_5 {
+            h4 {
+                margin-top: 0;
+                margin-bottom: .5rem;
+                border-bottom: 1px solid $blue;
+                padding-bottom: .5rem;
+            }
+            .meta {
+                font-size:12px;
+                .postedin {
+                    color:$lightgray;
+                    span {
+                        color:$gunmetal;
+                    }
+                }
+                a {
+                    color:$blue;
+                    position: relative;
+                    @include ease();
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 104%;
+                        height: 0;
+                        bottom: -2%;
+                        left: -2%;
+                        background-color: $blue;
+                        @include ease();
+                        z-index: -1;
+                    }
+                    &:hover {
+                        color:$white;
+                        &:after {
+                            height:104%;
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(odd) {
+            padding-right: .89rem;
+            @include breakpoint(phablet) {
+                padding-right:0;
+            }
+        }
+        &:nth-child(even) {
+            padding-left:.89rem;
+            @include breakpoint(phablet) {
+                padding-left:0;
+            }
+        }
+        &:hover {
+            img {
+                transition: .3s all ease;
+                transform: scale(1.1);
+            }
+        }
+    }
+}

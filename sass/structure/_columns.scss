@@ -1,0 +1,15 @@
+.column-2 {
+    max-width: 100%;
+    column-count: 2;
+    column-gap:$golden_ratio;
+    >*:not(.embed-container) {
+        display: inline-table;
+        vertical-align: top;
+    }
+    figure.wp-caption {
+        width:auto !important;
+    }
+    @include breakpoint(phablet) {
+        column-count: 1;
+    }
+}
